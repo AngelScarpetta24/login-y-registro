@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="nombre" content="Angel Scarpetta">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <main>
+         <!--Creacion de los formulario de registro y login para nuevos usuarios-->
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar a tu cuenta.</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes cuenta?</h3>
+                    <p>Regístrate para saber más de nosotros.</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
+             <!--Inputs y labels para generar las validaciones en los php-->
+            <div class="contenedor__login-register">
+                <form action="registro.php" method="post" class="formulario__register" onsubmit="return validarRegistro()">
+                    <h2>Registrarse</h2>
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="text" name="apellido" placeholder="Apellido" required>
+                    <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="password" name="contrasena" placeholder="Contraseña" required>
+                    <button type="submit">Registrarse</button>
+                    <div id="mensajeErrorRegistro" class="mensaje-error"></div>
+                </form>
+                <form action="login.php" method="post" class="formulario__login" onsubmit="return validarLogin()">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="password" name="contrasena" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar Sesión</button>
+                    <div id="mensajeErrorLogin" class="mensaje-error"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

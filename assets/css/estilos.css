@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(../img/espacio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.contenedor__encabezado {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.boton-volver {
+    display: block;
+    width: 200px;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: rgba(7, 48, 90, 0.3);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.boton-volver:hover {
+    background: #fff;
+    color: #154677;
+}
